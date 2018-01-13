@@ -3,16 +3,19 @@ var fireworks = [];
 
 function setup(){
   createCanvas(window.innerWidth,window.innerHeight);
+  colorMode(HSB);
   stroke(255);
   strokeWeight(4);
   gravity = createVector(0,0.2);
+  background(0);
 
 }
 
 
 
 function draw(){
-  background(51);
+  colorMode(RGB);
+  background(0,0,0,25);
   if (random(1)<0.05){
     fireworks.push(new Firework());
   }
